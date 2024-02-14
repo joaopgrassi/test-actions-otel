@@ -6,7 +6,7 @@ on:
       - model/registry/**
       - ./.github/workflows/generate-registry-area-labels.yml
       - ./.github/workflows/scripts/generate-registry-area-labels.sh
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   generate-component-labels:
