@@ -11,7 +11,7 @@ on:
 jobs:
   generate-component-labels:
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'open-telemetry' }}
+    if: ${{ github.repository_owner == 'joaopgrassi' }}
     steps:
       - uses: actions/checkout@v4
 
