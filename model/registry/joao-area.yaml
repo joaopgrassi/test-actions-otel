@@ -1,0 +1,13 @@
+groups:
+  - id: registry.something
+    prefix: something
+    type: attribute_group
+    brief: >
+        These attributes may be used for any operation.
+    attributes:
+      - id: someattribute
+        type: int
+        brief: >
+          some number attribute
+        examples: 1
+        stability: experimental
