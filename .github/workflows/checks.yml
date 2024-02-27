@@ -1,0 +1,19 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  areas-dropdown-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Run update permissions
+      run: chmod +x ./.github/workflows/scripts/update-issue-template-areas.sh
+
+    - name: Components dropdown in issue templates
+      run: |
+        ./.github/workflows/scripts/update-issue-template-areas.sh
+        git diff --exit-code '.github/ISSUE_TEMPLATE' || (echo 'Dropdowns in issue templates are out of date, please run "make generate-gh-issue-templates" and commit the changes in this PR.' && exit 1)

@@ -2,6 +2,17 @@ name: Propose new semantic conventions
 description: Propose new conventions you'd like to be part of the OpenTelemetry project
 labels: ["enhancement", "triage:needs-triage", "experts needed"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Please make sure to fill out the entire form below, providing as much
+        context as you can in order to help us triage the proposal as quickly as possible.
+
+        Before filing the proposal, please be sure you have searched through [existing issues](https://github.com/open-telemetry/semantic-conventions/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aenhancement+label%3Aarea:new)
+        to see if an existing issue covers your bug.
+
+        Additionally, make sure to read and follow the guidelines on [Project Proposal](https://github.com/open-telemetry/community/blob/main/project-management.md#project-management)
+        if the proposal is for a new set of conventions/working group.
   - type: dropdown
     id: area
     attributes:
