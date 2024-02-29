@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: alex-page/github-project-automation-plus@v0.8.3
         with:
-          project: "Test project"
+          project: "Test Project"
           column: Stale
           repo-token: ${{ secrets.GITHUB_TOKEN }}
