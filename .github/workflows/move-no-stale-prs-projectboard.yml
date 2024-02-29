@@ -1,0 +1,16 @@
+name: Move stale PRs into Stale triage column
+
+on:
+  pull_request:
+    types: [unlabeled]
+
+jobs:
+  automate-project-columns:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'stale'}}
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.8.3
+        with:
+          project: "Test project"
+          column: "In Progress"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
